@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA Luxe Fitness Club | Redefining Luxury Fitness</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cormorant Garamond & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: {
+                            900: '#07080a',
+                            800: '#0d0e12',
+                            700: '#14161d',
+                            600: '#1c1f2a',
+                        },
+                        gold: {
+                            light: '#f4e0a5',
+                            DEFAULT: '#d4af37',
+                            dark: '#aa820a',
+                            rose: '#e5b88f',
+                        },
+                        champagne: '#f7e7ce'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gold-gradient': 'linear-gradient(135deg, #f4e0a5 0%, #d4af37 50%, #aa820a 100%)',
+                        'dark-gradient': 'linear-gradient(180deg, rgba(7,8,10,0.85) 0%, rgba(13,14,18,0.95) 100%)',
+                        'radial-glow': 'radial-gradient(circle, rgba(212,175,55,0.12) 0%, rgba(7,8,10,0) 70%)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #07080a;
+            color: #e2e8f0;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #f7e7ce 0%, #d4af37 50%, #b8860b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .border-gold-gradient {
+            border-image: linear-gradient(to right, #d4af37, #f7e7ce, #aa820a) 1;
+        }
+        .gold-glow {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+        }
+        .gold-glow-hover:hover {
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.35);
+        }
+        .glass-panel {
+            background: rgba(20, 22, 29, 0.65);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .glass-card {
+            background: linear-gradient(145deg, rgba(28, 31, 42, 0.5), rgba(13, 14, 18, 0.8));
+            border: 1px solid rgba(212, 175, 55, 0.12);
+        }
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #07080a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a2d3d;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold selection:text-obsidian-900">
+
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-5">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full border border-gold flex items-center justify-center bg-obsidian-800 transition-transform duration-500 group-hover:rotate-180">
+                    <span class="font-serif text-xl font-bold text-gold">A</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-2xl font-bold tracking-widest text-gold-gradient">AURA</span>
+                    <span class="text-[9px] tracking-[0.3em] uppercase text-gray-400 -mt-1 font-light">Luxe Fitness Club</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center space-x-10 text-xs tracking-[0.2em] uppercase font-medium">
+                <a href="#home" class="nav-link text-white hover:text-gold transition-colors py-1 relative">Home</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-gold transition-colors py-1 relative">About</a>
+                <a href="#services" class="nav-link text-gray-300 hover:text-gold transition-colors py-1 relative">Services</a>
+                <a href="#brochure" class="nav-link text-gray-300 hover:text-gold transition-colors py-1 relative flex items-center gap-1.5">
+                    Brochure <span class="bg-gold/20 text-gold text-[9px] px-1.5 py-0.5 rounded font-mono border border-gold/30">VIP</span>
+                </a>
+                <a href="#gallery" class="nav-link text-gray-300 hover:text-gold transition-colors py-1 relative">Gallery</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-gold transition-colors py-1 relative">Contact</a>
+            </nav>
+
+            <!-- Call To Action Button -->
+            <div class="hidden sm:flex items-center gap-4">
+                <button onclick="openBookingModal('General Membership VIP Tour')" class="px-6 py-2.5 text-xs uppercase tracking-widest font-semibold text-obsidian-900 bg-gold-gradient rounded-sm hover:brightness-110 transition-all gold-glow duration-300">
+                    Book VIP Tour
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-gold text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden glass-panel border-t border-gold/10 mt-4 px-8 py-6 flex-col space-y-4">
+            <a href="#home" class="mobile-nav-link text-sm uppercase tracking-widest text-white hover:text-gold py-1">Home</a>
+            <a href="#about" class="mobile-nav-link text-sm uppercase tracking-widest text-gray-300 hover:text-gold py-1">About</a>
+            <a href="#services" class="mobile-nav-link text-sm uppercase tracking-widest text-gray-300 hover:text-gold py-1">Services</a>
+            <a href="#brochure" class="mobile-nav-link text-sm uppercase tracking-widest text-gray-300 hover:text-gold py-1">Brochure Categories</a>
+            <a href="#gallery" class="mobile-nav-link text-sm uppercase tracking-widest text-gray-300 hover:text-gold py-1">Gallery</a>
+            <a href="#contact" class="mobile-nav-link text-sm uppercase tracking-widest text-gray-300 hover:text-gold py-1">Contact</a>
+            <button onclick="openBookingModal('Mobile Menu VIP Request')" class="w-full mt-3 px-6 py-3 text-xs uppercase tracking-widest font-semibold text-obsidian-900 bg-gold-gradient rounded-sm text-center">
+                Book VIP Tour
+            </button>
+        </div>
+    </header>
+
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+        <!-- Background Image & Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2000&auto=format&fit=crop" 
+                 alt="Luxury Gym Interior" 
+                 class="w-full h-full object-cover object-center filter brightness-40 scale-105 transition-transform duration-10000 hover:scale-100">
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/70 to-obsidian-900/40"></div>
+            <div class="absolute inset-0 bg-radial-glow opacity-80"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 text-center mt-10">
+            <!-- Luxury Crest -->
+            <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full glass-panel border border-gold/30 mb-8 animate-pulse">
+                <i class="fa-solid fa-crown text-gold text-xs"></i>
+                <span class="text-[11px] uppercase tracking-[0.3em] text-gold font-medium">Exclusive Private Sanctuary</span>
+            </div>
+
+            <h1 class="font-serif text-5xl sm:text-7xl lg:text-8xl font-normal tracking-tight text-white mb-6 leading-tight">
+                Redefining <span class="italic font-light text-gold-gradient">Luxury</span> Fitness
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-gray-300 text-sm sm:text-base md:text-lg font-light leading-relaxed mb-10 tracking-wide">
+                Experience an unmatched synergy of bespoke personal training, state-of-the-art biohacking suites, and holistic hydrotherapy spa sanctuary reserved for the discerning few.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16">
+                <a href="#brochure" class="w-full sm:w-auto px-8 py-4 bg-gold-gradient text-obsidian-900 text-xs uppercase tracking-[0.2em] font-bold rounded-sm hover:shadow-lg hover:shadow-gold/20 transition-all duration-300">
+                    Explore Digital Brochure
+                </a>
+                <button onclick="openBookingModal('Hero VIP Pass')" class="w-full sm:w-auto px-8 py-4 glass-panel border border-gold/40 text-white text-xs uppercase tracking-[0.2em] font-medium rounded-sm hover:border-gold hover:text-gold transition-all duration-300">
+                    Request VIP Access
+                </button>
+            </div>
+
+            <!-- Highlights Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-white/10 max-w-5xl mx-auto">
+                <div class="text-center p-3">
+                    <div class="font-serif text-3xl md:text-4xl text-gold mb-1">24/7</div>
+                    <div class="text-[10px] uppercase tracking-widest text-gray-400">Concierge VIP Access</div>
+                </div>
+                <div class="text-center p-3">
+                    <div class="font-serif text-3xl md:text-4xl text-gold mb-1">1 : 1</div>
+                    <div class="text-[10px] uppercase tracking-widest text-gray-400">Master Trainers</div>
+                </div>
+                <div class="text-center p-3">
+                    <div class="font-serif text-3xl md:text-4xl text-gold mb-1">100%</div>
+                    <div class="text-[10px] uppercase tracking-widest text-gray-400">Bespoke Privacy</div>
+                </div>
+                <div class="text-center p-3">
+                    <div class="font-serif text-3xl md:text-4xl text-gold mb-1">5-Star</div>
+                    <div class="text-[10px] uppercase tracking-widest text-gray-400">Spa & Bio-Recovery</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-obsidian-800 relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Image Composition -->
+                <div class="lg:col-span-6 relative">
+                    <div class="relative z-10 rounded-sm overflow-hidden border border-gold/20 gold-glow">
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1200&auto=format&fit=crop" 
+                             alt="Luxury Fitness Center Interior" 
+                             class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <!-- Overlay Secondary Decorative Image -->
+                    <div class="hidden sm:block absolute -bottom-8 -right-8 w-3/5 z-20 rounded-sm overflow-hidden border-2 border-gold/40 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&auto=format&fit=crop" 
+                             alt="Personalized Training" 
+                             class="w-full h-[220px] object-cover">
+                    </div>
+                    <div class="absolute -top-6 -left-6 w-24 h-24 border-l-2 border-t-2 border-gold/40 z-0"></div>
+                </div>
+
+                <!-- Right Narrative Column -->
+                <div class="lg:col-span-6 lg:pl-6">
+                    <div class="inline-flex items-center gap-2 mb-3">
+                        <span class="w-8 h-[1px] bg-gold"></span>
+                        <span class="text-xs uppercase tracking-[0.3em] text-gold font-medium">The Sanctuary Philosophy</span>
+                    </div>
+                    <h2 class="font-serif text-4xl sm:text-5xl font-normal text-white mb-6 leading-tight">
+                        Crafted for the <span class="italic text-gold-gradient">Elite</span> Performance & Longevity
+                    </h2>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6 font-light">
+                        Founded on the principle that fitness is an art form, AURA Luxe Fitness Club transcends conventional workouts. We offer a high-privacy haven where bespoke physiology assessments meet ultra-luxurious architectural grandeur.
+                    </p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8 font-light">
+                        From custom biomechanical body sculpting to cryotherapy, infrared saunas, and private executive locker suites—every detail is curated by world-class wellness architects to optimize physical performance and mental clarity.
+                    </p>
+
+                    <!-- Key Pillars Grid -->
+                    <div class="grid grid-cols-2 gap-6 mb-8 pt-4 border-t border-white/10">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-fingerprint text-gold text-lg mt-1"></i>
+                            <div>
+                                <h4 class="text-white text-xs uppercase tracking-wider font-semibold">Biometric Tailoring</h4>
+                                <p class="text-gray-400 text-xs font-light mt-0.5">DNA-guided fitness & nutrition protocols.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-gem text-gold text-lg mt-1"></i>
+                            <div>
+                                <h4 class="text-white text-xs uppercase tracking-wider font-semibold">Executive Privacy</h4>
+                                <p class="text-gray-400 text-xs font-light mt-0.5">Capped membership ensuring non-crowded spaces.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#services" class="inline-flex items-center gap-3 text-gold text-xs uppercase tracking-[0.2em] font-semibold hover:gap-5 transition-all">
+                        Discover Our Amenities <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-obsidian-900 relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 mb-3">
+                    <span class="w-6 h-[1px] bg-gold"></span>
+                    <span class="text-xs uppercase tracking-[0.3em] text-gold font-medium">Unrivaled Facilities</span>
+                    <span class="w-6 h-[1px] bg-gold"></span>
+                </div>
+                <h2 class="font-serif text-4xl sm:text-5xl text-white font-normal mb-4">
+                    Signature <span class="italic text-gold-gradient">Amenities</span> & Concierge
+                </h2>
+                <p class="text-gray-400 text-sm font-light">
+                    Elevating your physical journey with state-of-the-art biohacking, athletic conditioning, and holistic recovery systems.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-card rounded-sm p-8 transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 rounded-full border border-gold/30 bg-obsidian-800 flex items-center justify-center text-gold text-2xl mb-6 group-hover:border-gold group-hover:bg-gold group-hover:text-obsidian-900 transition-all duration-300">
+                        <i class="fa-solid fa-dumbbell"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-white mb-3 group-hover:text-gold transition-colors">Custom Personal Training</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-light mb-6">
+                        Work 1-on-1 with elite Olympians and Master Strength Coaches utilizing bio-data feedback, custom force plate analytics, and targeted muscle hypertrophy programs.
+                    </p>
+                    <ul class="text-xs text-gray-300 space-y-2 mb-6 font-light">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Force Plate & Biomechanical Assessments</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Personal Performance Director</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card rounded-sm p-8 transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 rounded-full border border-gold/30 bg-obsidian-800 flex items-center justify-center text-gold text-2xl mb-6 group-hover:border-gold group-hover:bg-gold group-hover:text-obsidian-900 transition-all duration-300">
+                        <i class="fa-solid fa-snowflake"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-white mb-3 group-hover:text-gold transition-colors">Cryotherapy & Bio-Recovery</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-light mb-6">
+                        Accelerate cellular repair and reduce systemic inflammation in our -110°C Whole Body Cryo chambers, hyperbaric oxygen tanks, and red-light therapy suites.
+                    </p>
+                    <ul class="text-xs text-gray-300 space-y-2 mb-6 font-light">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Whole Body Nitrogen-Free Cryo</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Infrared & Photobiomodulation Pods</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card rounded-sm p-8 transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 rounded-full border border-gold/30 bg-obsidian-800 flex items-center justify-center text-gold text-2xl mb-6 group-hover:border-gold group-hover:bg-gold group-hover:text-obsidian-900 transition-all duration-300">
+                        <i class="fa-solid fa-spa"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-white mb-3 group-hover:text-gold transition-colors">Hydrotherapy Spa Sanctuary</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-light mb-6">
+                        Unwind in custom-built Finnish sauna pods, Himalayan salt relaxation rooms, cold plunge pools, and mineral-infused hydrotherapy bath channels.
+                    </p>
+                    <ul class="text-xs text-gray-300 space-y-2 mb-6 font-light">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Contrast Temperature Plunge Therapy</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Eucalyptus Infused Steam Lounges</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-card rounded-sm p-8 transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 rounded-full border border-gold/30 bg-obsidian-800 flex items-center justify-center text-gold text-2xl mb-6 group-hover:border-gold group-hover:bg-gold group-hover:text-obsidian-900 transition-all duration-300">
+                        <i class="fa-solid fa-child-reaching"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-white mb-3 group-hover:text-gold transition-colors">Private Reformer Pilates</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-light mb-6">
+                        Sculpt lean muscular control and restore spinal alignment using custom mahogany & leather Balanced Body® Reformer equipment in soundproofed private studios.
+                    </p>
+                    <ul class="text-xs text-gray-300 space-y-2 mb-6 font-light">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Cadillac & Reformer Equipment</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Postural Realignment Specialists</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass-card rounded-sm p-8 transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 rounded-full border border-gold/30 bg-obsidian-800 flex items-center justify-center text-gold text-2xl mb-6 group-hover:border-gold group-hover:bg-gold group-hover:text-obsidian-900 transition-all duration-300">
+                        <i class="fa-solid fa-apple-whole"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-white mb-3 group-hover:text-gold transition-colors">Bespoke Nutrition Concierge</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-light mb-6">
+                        Tailored organic macronutrient meal delivery, IV vitamin hydration therapy infusions, and daily post-workout bio-formulated peptide elixir shakes.
+                    </p>
+                    <ul class="text-xs text-gray-300 space-y-2 mb-6 font-light">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> On-Site Clinical Dietitians</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Fresh Gourmet Meal Prep Delivery</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass-card rounded-sm p-8 transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 rounded-full border border-gold/30 bg-obsidian-800 flex items-center justify-center text-gold text-2xl mb-6 group-hover:border-gold group-hover:bg-gold group-hover:text-obsidian-900 transition-all duration-300">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-white mb-3 group-hover:text-gold transition-colors">VIP Executive Suites</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed font-light mb-6">
+                        Private marble locker suites with personal laundry concierge, Dyson Supersonic™ stations, Italian leather lounges, and high-speed executive workspaces.
+                    </p>
+                    <ul class="text-xs text-gray-300 space-y-2 mb-6 font-light">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Assigned Private Lockers & Keyless Entry</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold text-[10px]"></i> Complimentary Luxury Apparel Wash</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="brochure" class="py-24 bg-obsidian-800 border-y border-gold/10 relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <!-- Brochure Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <div class="inline-flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-book-open text-gold text-xs"></i>
+                        <span class="text-xs uppercase tracking-[0.3em] text-gold font-medium">Digital Catalog 2026/2027</span>
+                    </div>
+                    <h2 class="font-serif text-4xl sm:text-5xl text-white font-normal">
+                        Interactive <span class="italic text-gold-gradient">Brochure</span> & Categories
+                    </h2>
+                </div>
+                <p class="text-gray-400 text-xs sm:text-sm max-w-md font-light mt-4 md:mt-0">
+                    Select a tier category below to inspect our detailed promotional catalog, key privileges, pricing brackets, and request a personalized PDF dossier.
+                </p>
+            </div>
+
+            <!-- Brochure Category Filter Tabs -->
+            <div class="flex flex-wrap gap-3 mb-10 border-b border-white/10 pb-4">
+                <button onclick="filterBrochure('all')" class="brochure-tab active px-5 py-2.5 text-xs uppercase tracking-wider font-medium rounded-sm border transition-all duration-300 bg-gold text-obsidian-900 border-gold">
+                    All Categories
+                </button>
+                <button onclick="filterBrochure('vip')" class="brochure-tab px-5 py-2.5 text-xs uppercase tracking-wider font-medium rounded-sm border transition-all duration-300 text-gray-300 border-white/10 hover:border-gold/50">
+                    VIP Executive Membership
+                </button>
+                <button onclick="filterBrochure('athlete')" class="brochure-tab px-5 py-2.5 text-xs uppercase tracking-wider font-medium rounded-sm border transition-all duration-300 text-gray-300 border-white/10 hover:border-gold/50">
+                    Elite Performance
+                </button>
+                <button onclick="filterBrochure('wellness')" class="brochure-tab px-5 py-2.5 text-xs uppercase tracking-wider font-medium rounded-sm border transition-all duration-300 text-gray-300 border-white/10 hover:border-gold/50">
+                    Wellness & Spa Retreat
+                </button>
+                <button onclick="filterBrochure('corporate')" class="brochure-tab px-5 py-2.5 text-xs uppercase tracking-wider font-medium rounded-sm border transition-all duration-300 text-gray-300 border-white/10 hover:border-gold/50">
+                    Corporate Masterclass
+                </button>
+            </div>
+
+            <!-- Dynamic Brochure Cards Display Grid -->
+            <div id="brochure-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Brochure Item 1 -->
+                <div class="brochure-item vip glass-panel rounded-sm overflow-hidden flex flex-col justify-between border border-gold/20 hover:border-gold transition-all duration-300">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-[0.2em] font-mono text-gold bg-gold/10 px-2.5 py-1 rounded border border-gold/30">Tier I - Executive</span>
+                                <h3 class="font-serif text-3xl text-white mt-3">VIP Executive Membership</h3>
+                            </div>
+                            <div class="text-right">
+                                <span class="font-serif text-3xl text-gold font-bold">$450</span>
+                                <span class="text-xs text-gray-400 block">/ month</span>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-300 text-xs leading-relaxed font-light mb-6">
+                            Designed for business executives, high-net-worth individuals, and celebrities seeking absolute discretion, 24/7 priority access, and executive wellness management.
+                        </p>
+
+                        <!-- Brochure Perks Checklist -->
+                        <div class="space-y-3 pt-4 border-t border-white/10">
+                            <div class="flex items-center gap-3 text-xs text-gray-300 font-light">
+                                <i class="fa-solid fa-crown text-gold"></i> Unlimited 24/7 Access to All Global Luxury Locations
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-300 font-light">
+                                <i class="fa-solid fa-shield-halved text-gold"></i> Dedicated Private Locker & Valet Laundry Service
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-300 font-light">
+                                <i class="fa-solid fa-user-gear text-gold"></i> 4 Monthly Master Personal Coaching Sessions Included
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-300 font-light">
+                                <i class="fa-solid fa-wine-glass text-gold"></i> Access to VIP Executive Lounge & Guest Privileges
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-obsidian-900/60 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-[11px] text-gray-400">Limited to 150 members/club</span>
+                        <button onclick="triggerBrochureModal('VIP Executive Membership', '$450/mo')" class="px-5 py-2.5 bg-gold-gradient text-obsidian-900 text-xs font-bold uppercase tracking-wider rounded-sm hover:brightness-110 transition-all">
+                            Request Brochure PDF
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Brochure Item 2 -->
+                <div class="brochure-item athlete glass-panel rounded-sm overflow-hidden flex flex-col justify-between border border-gold/20 hover:border-gold transition-all duration-300">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-[0.2em] font-mono text-gold bg-gold/10 px-2.5 py-1 rounded border border-gold/30">Tier II - Performance</span>
+                                <h3 class="font-serif text-3xl text-white mt-3">Elite Athlete & Biomechanics</h3>
+                            </div>
+                            <div class="text-right">
+                                <span class="font-serif text-3xl text-gold font-bold">$680</span>
+                                <span class="text-xs text-gray-400 block">/ month</span>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-300 text-xs leading-relaxed font-light mb-6">
+                            A hyper-focused performance program designed for professional athletes, sports enthusiasts, and endurance competitors seeking data-driven physique optimization.
+                        </p>
+
+                        <div class="space-y-3 pt-4 border-t border-white/10">
+                            <div class="flex items-center gap-3 text-xs text-gray-300 font-light">
+                                <i class="fa-solid fa-chart-line text-gold"></i> Weekly Biomechanical Force-Plate & VO2 Max Testing
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-300 font-light">
+                                <i class="fa-solid fa-dumbbell text-gold"></i> Unlimited Personal Olympic Athletic Coaching
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-300 font-light">
+                                <i class="fa-solid fa-bolt text-gold"></i> Unlimited Cryotherapy & Hyperbaric Recovery Pods
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-300 font-light">
+                                <i class="fa-solid fa-vial text-gold"></i> Clinical Hormone & DNA Nutrition Profiling
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-obsidian-900/60 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-[11px] text-gray-400">Includes Biometric Sensor Kit</span>
+                        <button onclick="triggerBrochureModal('Elite Athlete & Biomechanics', '$680/mo')" class="px-5 py-2.5 bg-gold-gradient text-obsidian-900 text-xs font-bold uppercase tracking-wider rounded-sm hover:brightness-110 transition-all">
+                            Request Brochure PDF
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Brochure Item 3 -->
+                <div class="brochure-item wellness glass-panel rounded-sm overflow-hidden flex flex-col justify-between border border-gold/20 hover:border-gold transition-all duration-300">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-[0.2em] font-mono text-gold bg-gold/10 px-2.5 py-1 rounded border border-gold/30">Tier III - Recovery</span>
+                                <h3 class="font-serif text-3xl text-white mt-3">Wellness & Spa Retreat Package</h3>
+                            </div>
+                            <div class="text-right">
+                                <span class="font-serif text-3xl text-gold font-bold">$380</span>
+                                <span class="text-xs text-gray-400 block">/ month</span>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-300 text-xs leading-relaxed font-light mb-6">
+                            Immerse yourself in total mind-body regeneration. Ideal for those prioritizing stress mitigation, lymphatic drainage, skin rejuvenation, and sound baths.
+                        </p>
+
+                        <div class="space-y-3 pt-4 border-t border-white/10">
+                            <div class="flex items-center gap-3 text-xs text-gray-300 font-light">
+                                <i class="fa-solid fa-hot-tub-person text-gold"></i> Unlimited Hydrotherapy, Sauna, & Salt Cave Pass
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-300 font-light">
+                                <i class="fa-solid fa-hand-holding-heart text-gold"></i> 2 Complimentary Deep Tissue Massages / Month
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-300 font-light">
+                                <i class="fa-solid fa-om text-gold"></i> Priority Booking for Private Mindful Yoga & Sound Baths
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-300 font-light">
+                                <i class="fa-solid fa-bottle-water text-gold"></i> Unlimited IV Hydration & Organic Elixir Bar
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-obsidian-900/60 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-[11px] text-gray-400">Sanctuary Access Included</span>
+                        <button onclick="triggerBrochureModal('Wellness & Spa Retreat Package', '$380/mo')" class="px-5 py-2.5 bg-gold-gradient text-obsidian-900 text-xs font-bold uppercase tracking-wider rounded-sm hover:brightness-110 transition-all">
+                            Request Brochure PDF
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Brochure Item 4 -->
+                <div class="brochure-item corporate glass-panel rounded-sm overflow-hidden flex flex-col justify-between border border-gold/20 hover:border-gold transition-all duration-300">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <span class="text-[10px] uppercase tracking-[0.2em] font-mono text-gold bg-gold/10 px-2.5 py-1 rounded border border-gold/30">Tier IV - Enterprise</span>
+                                <h3 class="font-serif text-3xl text-white mt-3">Corporate Masterclass & Luxury</h3>
+                            </div>
+                            <div class="text-right">
+                                <span class="font-serif text-3xl text-gold font-bold">Bespoke</span>
+                                <span class="text-xs text-gray-400 block">/ annual quote</span>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-300 text-xs leading-relaxed font-light mb-6">
+                            Tailored executive health initiatives for C-Suite teams, corporate wellness retreats, team biohacking seminars, and private group training bookings.
+                        </p>
+
+                        <div class="space-y-3 pt-4 border-t border-white/10">
+                            <div class="flex items-center gap-3 text-xs text-gray-300 font-light">
+                                <i class="fa-solid fa-building text-gold"></i> Dedicated Corporate Executive Wellness Liaison
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-300 font-light">
+                                <i class="fa-solid fa-users text-gold"></i> Exclusive Private Club Facility Takeover Hours
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-300 font-light">
+                                <i class="fa-solid fa-brain text-gold"></i> On-site Keynote Seminars on Longevity & Stress
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-300 font-light">
+                                <i class="fa-solid fa-award text-gold"></i> Transferable Executive VIP Passes
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-obsidian-900/60 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-[11px] text-gray-400">Customized Team Packages</span>
+                        <button onclick="triggerBrochureModal('Corporate Masterclass & Luxury', 'Custom Price')" class="px-5 py-2.5 bg-gold-gradient text-obsidian-900 text-xs font-bold uppercase tracking-wider rounded-sm hover:brightness-110 transition-all">
+                            Request Brochure PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 bg-obsidian-900 relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <!-- Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-2 mb-3">
+                    <span class="w-6 h-[1px] bg-gold"></span>
+                    <span class="text-xs uppercase tracking-[0.3em] text-gold font-medium">Visual Atmosphere</span>
+                    <span class="w-6 h-[1px] bg-gold"></span>
+                </div>
+                <h2 class="font-serif text-4xl sm:text-5xl text-white font-normal mb-4">
+                    The <span class="italic text-gold-gradient">Sanctuary</span> Gallery
+                </h2>
+                <p class="text-gray-400 text-sm font-light">
+                    Take a visual journey through our interior architecture, high-tech training zones, and serene spa facilities.
+                </p>
+            </div>
+
+            <!-- Gallery Filter Buttons -->
+            <div class="flex justify-center flex-wrap gap-2 sm:gap-4 mb-10">
+                <button onclick="filterGallery('all')" class="gallery-tab px-4 py-2 text-xs uppercase tracking-widest text-gold border-b-2 border-gold font-medium">All</button>
+                <button onclick="filterGallery('equipment')" class="gallery-tab px-4 py-2 text-xs uppercase tracking-widest text-gray-400 hover:text-gold transition-colors font-medium">Equipment</button>
+                <button onclick="filterGallery('spa')" class="gallery-tab px-4 py-2 text-xs uppercase tracking-widest text-gray-400 hover:text-gold transition-colors font-medium">Spa & Hydro</button>
+                <button onclick="filterGallery('lounges')" class="gallery-tab px-4 py-2 text-xs uppercase tracking-widest text-gray-400 hover:text-gold transition-colors font-medium">Locker Suites</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item equipment relative group rounded-sm overflow-hidden h-72 cursor-pointer border border-gold/10" onclick="openLightbox('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600&auto=format&fit=crop', 'Main Performance Floor')">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" alt="Gym Floor" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-gold text-[10px] uppercase tracking-widest font-mono">Equipment</span>
+                        <h4 class="text-white font-serif text-xl">Main Performance Floor</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item spa relative group rounded-sm overflow-hidden h-72 cursor-pointer border border-gold/10" onclick="openLightbox('https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1600&auto=format&fit=crop', 'Himalayan Hydrotherapy Suite')">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop" alt="Spa Pool" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-gold text-[10px] uppercase tracking-widest font-mono">Spa & Hydro</span>
+                        <h4 class="text-white font-serif text-xl">Himalayan Hydrotherapy Suite</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item lounges relative group rounded-sm overflow-hidden h-72 cursor-pointer border border-gold/10" onclick="openLightbox('https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?q=80&w=1600&auto=format&fit=crop', 'Executive VIP Locker Lounge')">
+                    <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?q=80&w=800&auto=format&fit=crop" alt="Luxury Lounge" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-gold text-[10px] uppercase tracking-widest font-mono">Locker Suites</span>
+                        <h4 class="text-white font-serif text-xl">Executive VIP Locker Lounge</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item equipment relative group rounded-sm overflow-hidden h-72 cursor-pointer border border-gold/10" onclick="openLightbox('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1600&auto=format&fit=crop', 'Custom Hammer Strength Suite')">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop" alt="Gym Equipment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-gold text-[10px] uppercase tracking-widest font-mono">Equipment</span>
+                        <h4 class="text-white font-serif text-xl">Custom Hammer Strength Suite</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item spa relative group rounded-sm overflow-hidden h-72 cursor-pointer border border-gold/10" onclick="openLightbox('https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1600&auto=format&fit=crop', 'Infrared Detox Sauna')">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800&auto=format&fit=crop" alt="Sauna" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-gold text-[10px] uppercase tracking-widest font-mono">Spa & Hydro</span>
+                        <h4 class="text-white font-serif text-xl">Infrared Detox Sauna</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item lounges relative group rounded-sm overflow-hidden h-72 cursor-pointer border border-gold/10" onclick="openLightbox('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1600&auto=format&fit=crop', 'Private Reformer Pilates Studio')">
+                    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=800&auto=format&fit=crop" alt="Pilates Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-obsidian-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-gold text-[10px] uppercase tracking-widest font-mono">Locker Suites</span>
+                        <h4 class="text-white font-serif text-xl">Private Reformer Pilates Studio</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-obsidian-800 border-t border-gold/10 relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Left Details Box -->
+                <div class="lg:col-span-5">
+                    <div class="inline-flex items-center gap-2 mb-3">
+                        <span class="w-6 h-[1px] bg-gold"></span>
+                        <span class="text-xs uppercase tracking-[0.3em] text-gold font-medium">Bespoke Inquiry</span>
+                    </div>
+                    <h2 class="font-serif text-4xl sm:text-5xl text-white font-normal mb-6">
+                        Initiate Your <span class="italic text-gold-gradient">Membership</span>
+                    </h2>
+                    <p class="text-gray-300 text-xs sm:text-sm font-light leading-relaxed mb-8">
+                        Admission to AURA Luxe Fitness Club is maintained through curated application and private consultation. Schedule your personal tour with our Senior Concierge.
+                    </p>
+
+                    <!-- Contact Details List -->
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold bg-obsidian-900 shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs uppercase tracking-wider text-gray-400 font-medium">Club Address</h4>
+                                <p class="text-sm text-white font-light">740 Fifth Avenue, Floor 18-20, New York, NY 10019</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold bg-obsidian-900 shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs uppercase tracking-wider text-gray-400 font-medium">VIP Concierge Line</h4>
+                                <p class="text-sm text-white font-light">+1 (800) 888-AURA / +1 (212) 555-0199</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-gold bg-obsidian-900 shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs uppercase tracking-wider text-gray-400 font-medium">Sanctuary Hours</h4>
+                                <p class="text-sm text-white font-light">VIP Members: 24 Hours / 365 Days</p>
+                                <p class="text-xs text-gray-400 font-light">Concierge & Spa: 6:00 AM – 10:00 PM Daily</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Google Maps Stylized Preview Card -->
+                    <div class="mt-8 rounded-sm overflow-hidden border border-gold/20 relative group">
+                        <div class="bg-obsidian-900 p-4 flex items-center justify-between border-b border-white/10">
+                            <span class="text-xs uppercase tracking-widest text-gold font-medium"><i class="fa-solid fa-map-pin mr-2"></i> Fifth Avenue Flagship Location</span>
+                            <span class="text-[10px] text-green-400 font-mono">● OPEN NOW</span>
+                        </div>
+                        <div class="h-40 bg-obsidian-700 relative flex items-center justify-center text-center p-4">
+                            <div class="absolute inset-0 opacity-40 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                            <div class="relative z-10">
+                                <i class="fa-solid fa-building-columns text-gold text-3xl mb-2"></i>
+                                <p class="text-xs text-gray-200">Interactive Map Location Matrix</p>
+                                <a href="https://maps.google.com" target="_blank" rel="noopener" class="mt-2 inline-block px-4 py-1.5 bg-gold/10 border border-gold/30 text-gold text-[10px] uppercase tracking-wider rounded hover:bg-gold hover:text-obsidian-900 transition-colors">
+                                    Open Navigation Map
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Interactive Form -->
+                <div class="lg:col-span-7">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="glass-panel p-8 sm:p-10 rounded-sm border border-gold/20">
+                        <h3 class="font-serif text-2xl text-white mb-6">VIP Membership Inquiry Form</h3>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-[11px] uppercase tracking-widest text-gray-400 mb-2">First Name *</label>
+                                <input type="text" required placeholder="e.g. Lord Alexander" class="w-full bg-obsidian-900 border border-white/10 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-gold transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] uppercase tracking-widest text-gray-400 mb-2">Last Name *</label>
+                                <input type="text" required placeholder="e.g. Sterling" class="w-full bg-obsidian-900 border border-white/10 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-gold transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-[11px] uppercase tracking-widest text-gray-400 mb-2">Direct Phone *</label>
+                                <input type="tel" required placeholder="+1 (555) 000-0000" class="w-full bg-obsidian-900 border border-white/10 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-gold transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] uppercase tracking-widest text-gray-400 mb-2">Email Address *</label>
+                                <input type="email" required placeholder="alexander@domain.com" class="w-full bg-obsidian-900 border border-white/10 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-gold transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-[11px] uppercase tracking-widest text-gray-400 mb-2">Preferred Membership Category</label>
+                            <select id="form-category-select" class="w-full bg-obsidian-900 border border-white/10 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-gold transition-colors">
+                                <option value="VIP Executive Membership">VIP Executive Membership ($450/mo)</option>
+                                <option value="Elite Athlete & Biomechanics">Elite Athlete & Biomechanics ($680/mo)</option>
+                                <option value="Wellness & Spa Retreat">Wellness & Spa Retreat Package ($380/mo)</option>
+                                <option value="Corporate Masterclass">Corporate Masterclass & Executive Takeover</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-[11px] uppercase tracking-widest text-gray-400 mb-2">Personal Goals or Special Requests</label>
+                            <textarea rows="4" placeholder="Mention your preferred tour dates, training objectives, or privacy requirements..." class="w-full bg-obsidian-900 border border-white/10 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-gold transition-colors resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-gold-gradient text-obsidian-900 font-bold text-xs uppercase tracking-[0.2em] rounded-sm hover:brightness-110 transition-all gold-glow">
+                            Submit Consultation Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-obsidian-900 border-t border-gold/10 pt-16 pb-12 text-gray-400">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
+                <!-- Column 1: Brand Info -->
+                <div class="lg:col-span-2">
+                    <a href="#home" class="flex items-center gap-3 mb-6">
+                        <div class="w-8 h-8 rounded-full border border-gold flex items-center justify-center bg-obsidian-800">
+                            <span class="font-serif text-lg font-bold text-gold">A</span>
+                        </div>
+                        <span class="font-serif text-xl font-bold tracking-widest text-gold-gradient">AURA LUXE</span>
+                    </a>
+                    <p class="text-xs text-gray-400 leading-relaxed font-light mb-6 max-w-sm">
+                        AURA Luxe Fitness Club represents the pinnacle of private wellness, tailored athletic conditioning, and holistic recovery architecture.
+                    </p>
+                    <div class="flex items-center space-x-4 text-gold">
+                        <a href="#" class="w-9 h-9 rounded-full border border-gold/30 flex items-center justify-center hover:bg-gold hover:text-obsidian-900 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full border border-gold/30 flex items-center justify-center hover:bg-gold hover:text-obsidian-900 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full border border-gold/30 flex items-center justify-center hover:bg-gold hover:text-obsidian-900 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest text-white font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-2.5 text-xs font-light">
+                        <li><a href="#home" class="hover:text-gold transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-gold transition-colors">Our Philosophy</a></li>
+                        <li><a href="#services" class="hover:text-gold transition-colors">Amenities & Spa</a></li>
+                        <li><a href="#brochure" class="hover:text-gold transition-colors">Brochure Catalog</a></li>
+                        <li><a href="#gallery" class="hover:text-gold transition-colors">Atmosphere Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-gold transition-colors">VIP Concierge</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Global Locations -->
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest text-white font-semibold mb-4">Flagships</h4>
+                    <ul class="space-y-2.5 text-xs font-light">
+                        <li><span class="text-gold">●</span> Fifth Avenue, New York</li>
+                        <li><span class="text-gold">●</span> Mayfair, London</li>
+                        <li><span class="text-gold">●</span> Downtown Dubai</li>
+                        <li><span class="text-gold">●</span> Ginza, Tokyo</li>
+                        <li><span class="text-gold">●</span> Beverly Hills, CA</li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest text-white font-semibold mb-4">The Journal</h4>
+                    <p class="text-xs font-light mb-4">Subscribe to receive private invitations & biohacking insights.</p>
+                    <form onsubmit="handleNewsletterSubmit(event)" class="space-y-2">
+                        <input type="email" required placeholder="Enter private email" class="w-full bg-obsidian-800 border border-white/10 rounded-sm px-3 py-2 text-xs text-white focus:outline-none focus:border-gold">
+                        <button type="submit" class="w-full py-2 bg-gold/20 border border-gold/40 text-gold text-xs font-semibold uppercase tracking-wider rounded-sm hover:bg-gold hover:text-obsidian-900 transition-all">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-[11px] font-light">
+                <p>&copy; 2026 AURA Luxe Fitness Club Inc. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-gold">Privacy Policy</a>
+                    <a href="#" class="hover:text-gold">Terms of Membership</a>
+                    <a href="#" class="hover:text-gold">Concierge Charter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Brochure PDF / Consultation Modal -->
+    <div id="brochure-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="glass-panel max-w-lg w-full p-8 rounded-sm border border-gold/40 relative animate-scaleIn">
+            <button onclick="closeBrochureModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gold text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <i class="fa-solid fa-file-pdf text-gold text-4xl mb-3"></i>
+                <h3 id="modal-brochure-title" class="font-serif text-2xl text-white">VIP Executive Membership</h3>
+                <p id="modal-brochure-price" class="text-gold text-xs font-mono uppercase tracking-widest mt-1">$450/mo - Complete Dossier</p>
+            </div>
+
+            <p class="text-xs text-gray-300 leading-relaxed font-light mb-6 text-center">
+                Please enter your credentials below to download the official 2026 High-Resolution Brochure Dossier PDF and receive a call from our Membership Director.
+            </p>
+
+            <form onsubmit="handleBrochureDownload(event)" class="space-y-4">
+                <div>
+                    <input type="text" required placeholder="Full Name" class="w-full bg-obsidian-900 border border-white/10 rounded-sm px-4 py-2.5 text-xs text-white focus:outline-none focus:border-gold">
+                </div>
+                <div>
+                    <input type="email" required placeholder="Business or Personal Email" class="w-full bg-obsidian-900 border border-white/10 rounded-sm px-4 py-2.5 text-xs text-white focus:outline-none focus:border-gold">
+                </div>
+                <div>
+                    <input type="tel" required placeholder="Mobile Phone Number" class="w-full bg-obsidian-900 border border-white/10 rounded-sm px-4 py-2.5 text-xs text-white focus:outline-none focus:border-gold">
+                </div>
+                <button type="submit" class="w-full py-3 bg-gold-gradient text-obsidian-900 text-xs font-bold uppercase tracking-widest rounded-sm hover:brightness-110 transition-all gold-glow">
+                    Download PDF Brochure Dossier
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gallery Lightbox Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex-col items-center justify-center p-4" onclick="closeLightbox()">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-gold text-3xl z-10">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-5xl w-full max-h-[85vh] relative flex flex-col items-center" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="Enlarged View" class="max-w-full max-h-[75vh] object-contain rounded border border-gold/30">
+            <h4 id="lightbox-caption" class="font-serif text-2xl text-gold mt-4 text-center"></h4>
+        </div>
+    </div>
+
+    <!-- Custom Notification Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 glass-panel border border-gold px-6 py-4 rounded-sm shadow-2xl hidden items-center gap-3">
+        <i class="fa-solid fa-circle-check text-gold text-lg"></i>
+        <span id="toast-msg" class="text-xs text-white font-medium">Request submitted successfully!</span>
+    </div>
+
+    <script>
+        // Header Background Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-obsidian-900/90', 'backdrop-blur-md', 'shadow-2xl', 'py-3');
+                header.classList.remove('py-5');
+            } else {
+                header.classList.remove('bg-obsidian-900/90', 'backdrop-blur-md', 'shadow-2xl', 'py-3');
+                header.classList.add('py-5');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+
+        // Brochure Category Filtering
+        function filterBrochure(category) {
+            const tabs = document.querySelectorAll('.brochure-tab');
+            const items = document.querySelectorAll('.brochure-item');
+
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-gold', 'text-obsidian-900', 'border-gold');
+                tab.classList.add('text-gray-300', 'border-white/10');
+            });
+
+            event.currentTarget.classList.add('bg-gold', 'text-obsidian-900', 'border-gold');
+            event.currentTarget.classList.remove('text-gray-300', 'border-white/10');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Gallery Filtering
+        function filterGallery(category) {
+            const tabs = document.querySelectorAll('.gallery-tab');
+            const items = document.querySelectorAll('.gallery-item');
+
+            tabs.forEach(tab => {
+                tab.classList.remove('text-gold', 'border-b-2', 'border-gold');
+                tab.classList.add('text-gray-400');
+            });
+
+            event.currentTarget.classList.add('text-gold', 'border-b-2', 'border-gold');
+            event.currentTarget.classList.remove('text-gray-400');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Brochure Modal Triggers
+        function triggerBrochureModal(title, price) {
+            document.getElementById('modal-brochure-title').innerText = title;
+            document.getElementById('modal-brochure-price').innerText = price + ' - Brochure Dossier';
+            const modal = document.getElementById('brochure-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeBrochureModal() {
+            const modal = document.getElementById('brochure-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function openBookingModal(defaultCategory) {
+            const categorySelect = document.getElementById('form-category-select');
+            if (categorySelect && defaultCategory) {
+                for(let option of categorySelect.options) {
+                    if(option.value.includes(defaultCategory) || defaultCategory.includes(option.value)) {
+                        option.selected = true;
+                        break;
+                    }
+                }
+            }
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Gallery Lightbox
+        function openLightbox(imgUrl, caption) {
+            document.getElementById('lightbox-img').src = imgUrl;
+            document.getElementById('lightbox-caption').innerText = caption;
+            const lightbox = document.getElementById('lightbox-modal');
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox-modal');
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+        }
+
+        // Form Handling Functions
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            showToast('Your VIP consultation request has been dispatched. Our concierge will contact you within 2 hours.');
+            e.target.reset();
+        }
+
+        function handleBrochureDownload(e) {
+            e.preventDefault();
+            closeBrochureModal();
+            showToast('Brochure Dossier PDF downloading... Concierge notice sent.');
+            e.target.reset();
+        }
+
+        function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            showToast('You have been subscribed to AURA Luxe Private Journal.');
+            e.target.reset();
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            toastMsg.innerText = message;
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('flex');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
